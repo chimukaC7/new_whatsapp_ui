@@ -47,14 +47,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         onPressed: () {
                           _globalKey.currentState!.openDrawer();
                         },
-                        icon: const Icon(
-                          Icons.menu,
+                        icon: const Icon(Icons.menu,
                           color: Colors.white,
                         )),
                     IconButton(
                         onPressed: () {},
-                        icon: const Icon(
-                          Icons.search,
+                        icon: const Icon(Icons.search,
                           color: Colors.white,
                         )),
                   ],
@@ -68,8 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     TextButton(
                         onPressed: () {},
-                        child: const Text(
-                          "Messages",
+                        child: const Text("Messages",
                           style: TextStyle(color: Colors.white, fontSize: 26),
                         )),
                     const SizedBox(
@@ -77,8 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: const Text(
-                          "Online",
+                        child: const Text("Online",
                           style: TextStyle(color: Colors.grey, fontSize: 26),
                         )),
                     const SizedBox(
@@ -86,8 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: const Text(
-                          "Groups",
+                        child: const Text("Groups",
                           style: TextStyle(color: Colors.grey, fontSize: 26),
                         )),
                     const SizedBox(
@@ -95,8 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     TextButton(
                         onPressed: () {},
-                        child: const Text(
-                          "More",
+                        child: const Text("More",
                           style: TextStyle(color: Colors.grey, fontSize: 26),
                         )),
                     const SizedBox(
@@ -107,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
               )
             ],
           ),
+
           Positioned(
             top: 190,
             left: 0,
@@ -213,21 +208,20 @@ class _MyHomePageState extends State<MyHomePage> {
             borderRadius: BorderRadius.horizontal(right: Radius.circular(40))),
         child: Container(
           decoration: const BoxDecoration(
-              
               borderRadius: BorderRadius.horizontal(right: Radius.circular(40)),
               boxShadow: [
                 BoxShadow(
                     color: Color(0x3D000000), spreadRadius: 30, blurRadius: 20)
               ]),
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
+          child: const Padding(
+            padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: [
                     Row(
-                      children: const [
+                      children: [
                         Icon(
                           Icons.arrow_back_ios,
                           color: Colors.white,
@@ -242,11 +236,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
                     Row(
-                      children: const [
+                      children: [
                         UserAvatar(filename: 'img3.jpeg'),
                         SizedBox(
                           width: 12,
@@ -257,28 +251,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 35,
                     ),
-                    const DrawerItem(
+                    DrawerItem(
                       title: 'Account',
                       icon: Icons.key,
                     ),
-                    const DrawerItem(title: 'Chats', icon: Icons.chat_bubble),
-                    const DrawerItem(
+                    DrawerItem(title: 'Chats', icon: Icons.chat_bubble),
+                    DrawerItem(
                         title: 'Notifications', icon: Icons.notifications),
-                    const DrawerItem(
-                        title: 'Data and Storage', icon: Icons.storage),
-                    const DrawerItem(title: 'Help', icon: Icons.help),
-                    const Divider(
+                    DrawerItem(title: 'Data and Storage', icon: Icons.storage),
+                    DrawerItem(title: 'Help', icon: Icons.help),
+                    Divider(
                       height: 35,
                       color: Colors.green,
                     ),
-                    const DrawerItem(
+                    DrawerItem(
                         title: 'Invite a friend', icon: Icons.people_outline),
                   ],
                 ),
-                const DrawerItem(title: 'Log out', icon: Icons.logout)
+                DrawerItem(title: 'Log out', icon: Icons.logout)
               ],
             ),
           ),
@@ -377,6 +370,7 @@ class _MyHomePageState extends State<MyHomePage> {
 class DrawerItem extends StatelessWidget {
   final String title;
   final IconData icon;
+
   const DrawerItem({
     super.key,
     required this.title,
@@ -412,6 +406,7 @@ class DrawerItem extends StatelessWidget {
 
 class UserAvatar extends StatelessWidget {
   final String filename;
+
   const UserAvatar({
     super.key,
     required this.filename,
